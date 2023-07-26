@@ -1,6 +1,6 @@
 //
-//  SwiftUI_WeatherApp.swift
-//  SwiftUI-Weather
+//  GoverlaApp.swift
+//  Goverla
 //
 //  Created by Stas Redreiev on 20.07.2023.
 //
@@ -8,10 +8,9 @@
 import SwiftUI
 
 @main
-struct SwiftUI_WeatherApp: App {
+struct GoverlaApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
             VideoListView()
         }
     }
