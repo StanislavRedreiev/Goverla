@@ -11,7 +11,8 @@ import SwiftUI
 struct GoverlaApp: App {
     var body: some Scene {
         WindowGroup {
-            VideoListView()
+            let diContainer = AppEnvironment.bootstrap().container
+            VideoListView().inject(diContainer)
         }
     }
 }

@@ -24,6 +24,7 @@
 		B7C2A4092A7109B100B9CAFC /* VideoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A4082A7109B100B9CAFC /* VideoCellView.swift */; };
 		B7C2A40C2A710AD600B9CAFC /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A40B2A710AD600B9CAFC /* Loadable.swift */; };
 		B7C2A40F2A71158900B9CAFC /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A40E2A71158900B9CAFC /* DIContainer.swift */; };
+		B7C2A4112A711C5300B9CAFC /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A4102A711C5300B9CAFC /* AppEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B7C2A4082A7109B100B9CAFC /* VideoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCellView.swift; sourceTree = "<group>"; };
 		B7C2A40B2A710AD600B9CAFC /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		B7C2A40E2A71158900B9CAFC /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		B7C2A4102A711C5300B9CAFC /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		B7FB065D2A69539900AAAA2D /* Goverla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goverla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				B7C2A3F12A7104BD00B9CAFC /* GoverlaApp.swift */,
+				B7C2A4102A711C5300B9CAFC /* AppEnvironment.swift */,
 				B7C2A3DF2A7104BC00B9CAFC /* UI */,
 				B7C2A3EC2A7104BD00B9CAFC /* Models */,
 				B7C2A4022A71077500B9CAFC /* Interactors */,
@@ -261,6 +264,7 @@
 				B7C2A3F92A7104BD00B9CAFC /* VideoDetailView.swift in Sources */,
 				B7C2A3FA2A7104BD00B9CAFC /* VideoListView.swift in Sources */,
 				B7C2A4092A7109B100B9CAFC /* VideoCellView.swift in Sources */,
+				B7C2A4112A711C5300B9CAFC /* AppEnvironment.swift in Sources */,
 				B7C2A3F72A7104BD00B9CAFC /* CityView.swift in Sources */,
 				B7C2A3F42A7104BD00B9CAFC /* WeatherView.swift in Sources */,
 				B7C2A40F2A71158900B9CAFC /* DIContainer.swift in Sources */,
