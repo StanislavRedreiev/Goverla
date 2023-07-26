@@ -9,46 +9,39 @@ import SwiftUI
 
 struct VideoListView: View {
     
-    var videos: [Video] = VideoList.videos
+    var videosDataState: Loadable<[Video]> = .notRequested
+    @Environment(\.injected) private var injected: DIContainer
+    
     var body: some View {
-        
         NavigationView {
+            content
+        }
+        .onAppear() {
+            
+            // ask interactor to fetch videos
+        }
+    }
+    
+    @ViewBuilder private var content: some View {
+        switch videosDataState {
+        case .notRequested:
+            Text("No videos")
+        case .isLoading:
+            Text("Videos are loading")
+        case .loaded(let videos):
             List(videos, id: \.id) { video in
-                NavigationLink(destination: VideoDetailView(video: video))
-                {
+                NavigationLink(destination: VideoDetailView(video: video)) {
                     VideoCellView(video: video)
                 }
-                
             }
             .navigationTitle("Tutorials")
+        case .failed(let error):
+            Text("Something went wrong: \(error.localizedDescription)")
         }
     }
 }
 
-struct VideoCellView: View {
-    
-    var video: Video
-    
-    var body: some View {
-        HStack(alignment: .top) {
-            Image(video.imageName)
-                .resizable()
-                        .scaledToFit()
-                .frame(height: 70)
-                .cornerRadius(6)
-            
-            VStack(alignment: .leading) {
-                Text(video.title)
-                    .fontWeight(.semibold)
-                    .lineLimit(2)
-                
-                Text(video.uploadDate)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-            }
-        }
-    }
-}
+
 
 struct VideoListView_Previews: PreviewProvider {
     static var previews: some View {

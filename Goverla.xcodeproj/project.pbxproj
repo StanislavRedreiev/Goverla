@@ -21,6 +21,9 @@
 		B7C2A4002A7104BD00B9CAFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A3F32A7104BD00B9CAFC /* ContentView.swift */; };
 		B7C2A4052A71079400B9CAFC /* VideoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A4042A71079400B9CAFC /* VideoListInteractor.swift */; };
 		B7C2A4072A7107EC00B9CAFC /* VideoListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A4062A7107EC00B9CAFC /* VideoListRepository.swift */; };
+		B7C2A4092A7109B100B9CAFC /* VideoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A4082A7109B100B9CAFC /* VideoCellView.swift */; };
+		B7C2A40C2A710AD600B9CAFC /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A40B2A710AD600B9CAFC /* Loadable.swift */; };
+		B7C2A40F2A71158900B9CAFC /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A40E2A71158900B9CAFC /* DIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		B7C2A3F32A7104BD00B9CAFC /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B7C2A4042A71079400B9CAFC /* VideoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListInteractor.swift; sourceTree = "<group>"; };
 		B7C2A4062A7107EC00B9CAFC /* VideoListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListRepository.swift; sourceTree = "<group>"; };
+		B7C2A4082A7109B100B9CAFC /* VideoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCellView.swift; sourceTree = "<group>"; };
+		B7C2A40B2A710AD600B9CAFC /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		B7C2A40E2A71158900B9CAFC /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		B7FB065D2A69539900AAAA2D /* Goverla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goverla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,11 +62,12 @@
 			isa = PBXGroup;
 			children = (
 				B7C2A3F12A7104BD00B9CAFC /* GoverlaApp.swift */,
-				B7C2A4032A71077D00B9CAFC /* Repositories */,
-				B7C2A4022A71077500B9CAFC /* Interactors */,
 				B7C2A3DF2A7104BC00B9CAFC /* UI */,
 				B7C2A3EC2A7104BD00B9CAFC /* Models */,
-				B7C2A3F22A7104BD00B9CAFC /* Interactors */,
+				B7C2A4022A71077500B9CAFC /* Interactors */,
+				B7C2A4032A71077D00B9CAFC /* Repositories */,
+				B7C2A40A2A710ABA00B9CAFC /* Enums */,
+				B7C2A40D2A71156E00B9CAFC /* Helpers */,
 				B7C2A3EE2A7104BD00B9CAFC /* Preview Content */,
 				B7C2A3EB2A7104BD00B9CAFC /* Assets.xcassets */,
 			);
@@ -110,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				B7C2A3EA2A7104BD00B9CAFC /* VideoListView.swift */,
+				B7C2A4082A7109B100B9CAFC /* VideoCellView.swift */,
 			);
 			path = VideoList;
 			sourceTree = "<group>";
@@ -130,13 +138,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B7C2A3F22A7104BD00B9CAFC /* Interactors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactors;
-			sourceTree = "<group>";
-		};
 		B7C2A4022A71077500B9CAFC /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +152,22 @@
 				B7C2A4062A7107EC00B9CAFC /* VideoListRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B7C2A40A2A710ABA00B9CAFC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B7C2A40B2A710AD600B9CAFC /* Loadable.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B7C2A40D2A71156E00B9CAFC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B7C2A40E2A71158900B9CAFC /* DIContainer.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B7FB06542A69539900AAAA2D = {
@@ -240,10 +257,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7C2A3F52A7104BD00B9CAFC /* BackgroundView.swift in Sources */,
+				B7C2A40C2A710AD600B9CAFC /* Loadable.swift in Sources */,
 				B7C2A3F92A7104BD00B9CAFC /* VideoDetailView.swift in Sources */,
 				B7C2A3FA2A7104BD00B9CAFC /* VideoListView.swift in Sources */,
+				B7C2A4092A7109B100B9CAFC /* VideoCellView.swift in Sources */,
 				B7C2A3F72A7104BD00B9CAFC /* CityView.swift in Sources */,
 				B7C2A3F42A7104BD00B9CAFC /* WeatherView.swift in Sources */,
+				B7C2A40F2A71158900B9CAFC /* DIContainer.swift in Sources */,
 				B7C2A3FC2A7104BD00B9CAFC /* Video.swift in Sources */,
 				B7C2A4002A7104BD00B9CAFC /* ContentView.swift in Sources */,
 				B7C2A3F62A7104BD00B9CAFC /* WeatherDayView.swift in Sources */,
