@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  SwiftUI-Weather
+//  Goverla
 //
 //  Created by Stas Redreiev on 20.07.2023.
 //
