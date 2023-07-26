@@ -17,8 +17,10 @@
 		B7C2A3FB2A7104BD00B9CAFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7C2A3EB2A7104BD00B9CAFC /* Assets.xcassets */; };
 		B7C2A3FC2A7104BD00B9CAFC /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A3ED2A7104BD00B9CAFC /* Video.swift */; };
 		B7C2A3FD2A7104BD00B9CAFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7C2A3EF2A7104BD00B9CAFC /* Preview Assets.xcassets */; };
-		B7C2A3FF2A7104BD00B9CAFC /* SwiftUI_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A3F12A7104BD00B9CAFC /* SwiftUI_WeatherApp.swift */; };
+		B7C2A3FF2A7104BD00B9CAFC /* GoverlaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A3F12A7104BD00B9CAFC /* GoverlaApp.swift */; };
 		B7C2A4002A7104BD00B9CAFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A3F32A7104BD00B9CAFC /* ContentView.swift */; };
+		B7C2A4052A71079400B9CAFC /* VideoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A4042A71079400B9CAFC /* VideoListInteractor.swift */; };
+		B7C2A4072A7107EC00B9CAFC /* VideoListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A4062A7107EC00B9CAFC /* VideoListRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +34,10 @@
 		B7C2A3EB2A7104BD00B9CAFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7C2A3ED2A7104BD00B9CAFC /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		B7C2A3EF2A7104BD00B9CAFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B7C2A3F12A7104BD00B9CAFC /* SwiftUI_WeatherApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUI_WeatherApp.swift; sourceTree = "<group>"; };
+		B7C2A3F12A7104BD00B9CAFC /* GoverlaApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoverlaApp.swift; sourceTree = "<group>"; };
 		B7C2A3F32A7104BD00B9CAFC /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B7C2A4042A71079400B9CAFC /* VideoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListInteractor.swift; sourceTree = "<group>"; };
+		B7C2A4062A7107EC00B9CAFC /* VideoListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListRepository.swift; sourceTree = "<group>"; };
 		B7FB065D2A69539900AAAA2D /* Goverla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goverla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -51,13 +55,14 @@
 		B7C2A3DE2A7104BC00B9CAFC /* Goverla */ = {
 			isa = PBXGroup;
 			children = (
+				B7C2A3F12A7104BD00B9CAFC /* GoverlaApp.swift */,
+				B7C2A4032A71077D00B9CAFC /* Repositories */,
+				B7C2A4022A71077500B9CAFC /* Interactors */,
 				B7C2A3DF2A7104BC00B9CAFC /* UI */,
-				B7C2A3EB2A7104BD00B9CAFC /* Assets.xcassets */,
 				B7C2A3EC2A7104BD00B9CAFC /* Models */,
-				B7C2A3EE2A7104BD00B9CAFC /* Preview Content */,
-				B7C2A3F12A7104BD00B9CAFC /* SwiftUI_WeatherApp.swift */,
 				B7C2A3F22A7104BD00B9CAFC /* Interactors */,
-				B7C2A3F32A7104BD00B9CAFC /* ContentView.swift */,
+				B7C2A3EE2A7104BD00B9CAFC /* Preview Content */,
+				B7C2A3EB2A7104BD00B9CAFC /* Assets.xcassets */,
 			);
 			path = Goverla;
 			sourceTree = "<group>";
@@ -65,9 +70,9 @@
 		B7C2A3DF2A7104BC00B9CAFC /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				B7C2A3E02A7104BC00B9CAFC /* WeatherView.swift */,
-				B7C2A3E12A7104BD00B9CAFC /* Other */,
+				B7C2A3F32A7104BD00B9CAFC /* ContentView.swift */,
 				B7C2A3E62A7104BD00B9CAFC /* Screens */,
+				B7C2A3E12A7104BD00B9CAFC /* Other */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -75,6 +80,7 @@
 		B7C2A3E12A7104BD00B9CAFC /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B7C2A3E02A7104BC00B9CAFC /* WeatherView.swift */,
 				B7C2A3E22A7104BD00B9CAFC /* BackgroundView.swift */,
 				B7C2A3E32A7104BD00B9CAFC /* WeatherDayView.swift */,
 				B7C2A3E42A7104BD00B9CAFC /* CityView.swift */,
@@ -129,6 +135,22 @@
 			children = (
 			);
 			path = Interactors;
+			sourceTree = "<group>";
+		};
+		B7C2A4022A71077500B9CAFC /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				B7C2A4042A71079400B9CAFC /* VideoListInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		B7C2A4032A71077D00B9CAFC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B7C2A4062A7107EC00B9CAFC /* VideoListRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		B7FB06542A69539900AAAA2D = {
@@ -225,8 +247,10 @@
 				B7C2A3FC2A7104BD00B9CAFC /* Video.swift in Sources */,
 				B7C2A4002A7104BD00B9CAFC /* ContentView.swift in Sources */,
 				B7C2A3F62A7104BD00B9CAFC /* WeatherDayView.swift in Sources */,
-				B7C2A3FF2A7104BD00B9CAFC /* SwiftUI_WeatherApp.swift in Sources */,
+				B7C2A3FF2A7104BD00B9CAFC /* GoverlaApp.swift in Sources */,
+				B7C2A4052A71079400B9CAFC /* VideoListInteractor.swift in Sources */,
 				B7C2A3F82A7104BD00B9CAFC /* ActionButton.swift in Sources */,
+				B7C2A4072A7107EC00B9CAFC /* VideoListRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +378,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Weather/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Goverla/Preview Content\"";
 				DEVELOPMENT_TEAM = 7YFUVB59LX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -383,7 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Weather/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Goverla/Preview Content\"";
 				DEVELOPMENT_TEAM = 7YFUVB59LX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
