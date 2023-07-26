@@ -12,6 +12,14 @@ protocol VideoListInteractorProtocol {
 }
 
 struct VideoListInteractor: VideoListInteractorProtocol {
+    
+    let appState: AppState
+    let repository: VideoListRepositoryProtocol
+    
+    init(appState: AppState, repository: VideoListRepositoryProtocol) {
+        self.appState = appState
+        self.repository = repository
+    }
 
     func fetchVideos(videosDataState: LoadableSubject<[Video]>) {
         Task.init {
@@ -27,6 +35,8 @@ struct VideoListInteractor: VideoListInteractorProtocol {
             }
         }
     }
-    
-    
+}
+
+struct StubVideoListInteractor: VideoListInteractorProtocol {
+    func fetchVideos(videosDataState: LoadableSubject<[Video]>) { }
 }
